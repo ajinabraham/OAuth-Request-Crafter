@@ -1,0 +1,1213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>&lt;script&gt;
+/*
+ * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
+ * in FIPS PUB 180-1
+ * Version 2.1a Copyright Paul Johnston 2000 - 2002.
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for details.
+ */
+
+/*
+ * Configurable variables. You may need to tweak these to be compatible with
+ * the server-side, but the defaults work in most cases.
+ */
+var hexcase = 0;  /* hex output format. 0 - lowercase; 1 - uppercase        */
+var b64pad  = ""; /* base-64 pad character. "=" for strict RFC compliance   */
+var chrsz   = 8;  /* bits per input character. 8 - ASCII; 16 - Unicode      */
+
+/*
+ * These are the functions you'll usually want to call
+ * They take string arguments and return either hex or base-64 encoded strings
+ */
+function hex_sha1(s){return binb2hex(core_sha1(str2binb(s),s.length * chrsz));}
+function b64_sha1(s){return binb2b64(core_sha1(str2binb(s),s.length * chrsz));}
+function str_sha1(s){return binb2str(core_sha1(str2binb(s),s.length * chrsz));}
+function hex_hmac_sha1(key, data){ return binb2hex(core_hmac_sha1(key, data));}
+function b64_hmac_sha1(key, data){ return binb2b64(core_hmac_sha1(key, data));}
+function str_hmac_sha1(key, data){ return binb2str(core_hmac_sha1(key, data));}
+
+/*
+ * Perform a simple self-test to see if the VM is working
+ */
+function sha1_vm_test()
+{
+  return hex_sha1("abc") == "a9993e364706816aba3e25717850c26c9cd0d89d";
+}
+
+/*
+ * Calculate the SHA-1 of an array of big-endian words, and a bit length
+ */
+function core_sha1(x, len)
+{
+  /* append padding */
+  x[len &gt;&gt; 5] |= 0x80 &lt;&lt; (24 - len % 32);
+  x[((len + 64 &gt;&gt; 9) &lt;&lt; 4) + 15] = len;
+
+  var w = Array(80);
+  var a =  1732584193;
+  var b = -271733879;
+  var c = -1732584194;
+  var d =  271733878;
+  var e = -1009589776;
+
+  for(var i = 0; i &lt; x.length; i += 16)
+  {
+    var olda = a;
+    var oldb = b;
+    var oldc = c;
+    var oldd = d;
+    var olde = e;
+
+    for(var j = 0; j &lt; 80; j++)
+    {
+      if(j &lt; 16) w[j] = x[i + j];
+      else w[j] = rol(w[j-3] ^ w[j-8] ^ w[j-14] ^ w[j-16], 1);
+      var t = safe_add(safe_add(rol(a, 5), sha1_ft(j, b, c, d)),
+                       safe_add(safe_add(e, w[j]), sha1_kt(j)));
+      e = d;
+      d = c;
+      c = rol(b, 30);
+      b = a;
+      a = t;
+    }
+
+    a = safe_add(a, olda);
+    b = safe_add(b, oldb);
+    c = safe_add(c, oldc);
+    d = safe_add(d, oldd);
+    e = safe_add(e, olde);
+  }
+  return Array(a, b, c, d, e);
+
+}
+
+/*
+ * Perform the appropriate triplet combination function for the current
+ * iteration
+ */
+function sha1_ft(t, b, c, d)
+{
+  if(t &lt; 20) return (b &amp; c) | ((~b) &amp; d);
+  if(t &lt; 40) return b ^ c ^ d;
+  if(t &lt; 60) return (b &amp; c) | (b &amp; d) | (c &amp; d);
+  return b ^ c ^ d;
+}
+
+/*
+ * Determine the appropriate additive constant for the current iteration
+ */
+function sha1_kt(t)
+{
+  return (t &lt; 20) ?  1518500249 : (t &lt; 40) ?  1859775393 :
+         (t &lt; 60) ? -1894007588 : -899497514;
+}
+
+/*
+ * Calculate the HMAC-SHA1 of a key and some data
+ */
+function core_hmac_sha1(key, data)
+{
+  var bkey = str2binb(key);
+  if(bkey.length &gt; 16) bkey = core_sha1(bkey, key.length * chrsz);
+
+  var ipad = Array(16), opad = Array(16);
+  for(var i = 0; i &lt; 16; i++)
+  {
+    ipad[i] = bkey[i] ^ 0x36363636;
+    opad[i] = bkey[i] ^ 0x5C5C5C5C;
+  }
+
+  var hash = core_sha1(ipad.concat(str2binb(data)), 512 + data.length * chrsz);
+  return core_sha1(opad.concat(hash), 512 + 160);
+}
+
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */
+function safe_add(x, y)
+{
+  var lsw = (x &amp; 0xFFFF) + (y &amp; 0xFFFF);
+  var msw = (x &gt;&gt; 16) + (y &gt;&gt; 16) + (lsw &gt;&gt; 16);
+  return (msw &lt;&lt; 16) | (lsw &amp; 0xFFFF);
+}
+
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */
+function rol(num, cnt)
+{
+  return (num &lt;&lt; cnt) | (num &gt;&gt;&gt; (32 - cnt));
+}
+
+/*
+ * Convert an 8-bit or 16-bit string to an array of big-endian words
+ * In 8-bit function, characters &gt;255 have their hi-byte silently ignored.
+ */
+function str2binb(str)
+{
+  var bin = Array();
+  var mask = (1 &lt;&lt; chrsz) - 1;
+  for(var i = 0; i &lt; str.length * chrsz; i += chrsz)
+    bin[i&gt;&gt;5] |= (str.charCodeAt(i / chrsz) &amp; mask) &lt;&lt; (32 - chrsz - i%32);
+  return bin;
+}
+
+/*
+ * Convert an array of big-endian words to a string
+ */
+function binb2str(bin)
+{
+  var str = "";
+  var mask = (1 &lt;&lt; chrsz) - 1;
+  for(var i = 0; i &lt; bin.length * 32; i += chrsz)
+    str += String.fromCharCode((bin[i&gt;&gt;5] &gt;&gt;&gt; (32 - chrsz - i%32)) &amp; mask);
+  return str;
+}
+
+/*
+ * Convert an array of big-endian words to a hex string.
+ */
+function binb2hex(binarray)
+{
+  var hex_tab = hexcase ? "0123456789ABCDEF" : "0123456789abcdef";
+  var str = "";
+  for(var i = 0; i &lt; binarray.length * 4; i++)
+  {
+    str += hex_tab.charAt((binarray[i&gt;&gt;2] &gt;&gt; ((3 - i%4)*8+4)) &amp; 0xF) +
+           hex_tab.charAt((binarray[i&gt;&gt;2] &gt;&gt; ((3 - i%4)*8  )) &amp; 0xF);
+  }
+  return str;
+}
+
+/*
+ * Convert an array of big-endian words to a base-64 string
+ */
+function binb2b64(binarray)
+{
+  var tab = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  var str = "";
+  for(var i = 0; i &lt; binarray.length * 4; i += 3)
+  {
+    var triplet = (((binarray[i   &gt;&gt; 2] &gt;&gt; 8 * (3 -  i   %4)) &amp; 0xFF) &lt;&lt; 16)
+                | (((binarray[i+1 &gt;&gt; 2] &gt;&gt; 8 * (3 - (i+1)%4)) &amp; 0xFF) &lt;&lt; 8 )
+                |  ((binarray[i+2 &gt;&gt; 2] &gt;&gt; 8 * (3 - (i+2)%4)) &amp; 0xFF);
+    for(var j = 0; j &lt; 4; j++)
+    {
+      if(i * 8 + j * 6 &gt; binarray.length * 32) str += b64pad;
+      else str += tab.charAt((triplet &gt;&gt; 6*(3-j)) &amp; 0x3F);
+    }
+  }
+  return str;
+}
+/*
+ * Copyright 2008 Netflix, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* Here's some JavaScript software for implementing OAuth.
+
+   This isn't as useful as you might hope.  OAuth is based around
+   allowing tools and websites to talk to each other.  However,
+   JavaScript running in web browsers is hampered by security
+   restrictions that prevent code running on one website from
+   accessing data stored or served on another.
+
+   Before you start hacking, make sure you understand the limitations
+   posed by cross-domain XMLHttpRequest.
+
+   On the bright side, some platforms use JavaScript as their
+   language, but enable the programmer to access other web sites.
+   Examples include Google Gadgets, and Microsoft Vista Sidebar.
+   For those platforms, this library should come in handy.
+*/
+
+// The HMAC-SHA1 signature method calls b64_hmac_sha1, defined by
+// http://pajhome.org.uk/crypt/md5/sha1.js
+
+/* An OAuth message is represented as an object like this:
+   {method: "GET", action: "http://server.com/path", parameters: ...}
+
+   The parameters may be either a map {name: value, name2: value2}
+   or an Array of name-value pairs [[name, value], [name2, value2]].
+   The latter representation is more powerful: it supports parameters
+   in a specific sequence, or several parameters with the same name;
+   for example [["a", 1], ["b", 2], ["a", 3]].
+
+   Parameter names and values are NOT percent-encoded in an object.
+   They must be encoded before transmission and decoded after reception.
+   For example, this message object:
+   {method: "GET", action: "http://server/path", parameters: {p: "x y"}}
+   ... can be transmitted as an HTTP request that begins:
+   GET /path?p=x%20y HTTP/1.0
+   (This isn't a valid OAuth request, since it lacks a signature etc.)
+   Note that the object "x y" is transmitted as x%20y.  To encode
+   parameters, you can call OAuth.addToURL, OAuth.formEncode or
+   OAuth.getAuthorization.
+
+   This message object model harmonizes with the browser object model for
+   input elements of an form, whose value property isn't percent encoded.
+   The browser encodes each value before transmitting it. For example,
+   see consumer.setInputs in example/consumer.js.
+ */
+
+/* This script needs to know what time it is. By default, it uses the local
+   clock (new Date), which is apt to be inaccurate in browsers. To do
+   better, you can load this script from a URL whose query string contains
+   an oauth_timestamp parameter, whose value is a current Unix timestamp.
+   For example, when generating the enclosing document using PHP:
+
+   &lt;script src="oauth.js?oauth_timestamp=&lt;?=time()?&gt;" ...
+
+   Another option is to call OAuth.correctTimestamp with a Unix timestamp.
+ */
+
+var OAuth; if (OAuth == null) OAuth = {};
+
+OAuth.setProperties = function setProperties(into, from) {
+    if (into != null &amp;&amp; from != null) {
+        for (var key in from) {
+            into[key] = from[key];
+        }
+    }
+    return into;
+}
+
+OAuth.setProperties(OAuth, // utility functions
+{
+    percentEncode: function percentEncode(s) {
+        if (s == null) {
+            return "";
+        }
+        if (s instanceof Array) {
+            var e = "";
+            for (var i = 0; i &lt; s.length; ++s) {
+                if (e != "") e += '&amp;';
+                e += OAuth.percentEncode(s[i]);
+            }
+            return e;
+        }
+        s = encodeURIComponent(s);
+        // Now replace the values which encodeURIComponent doesn't do
+        // encodeURIComponent ignores: - _ . ! ~ * ' ( )
+        // OAuth dictates the only ones you can ignore are: - _ . ~
+        // Source: http://developer.mozilla.org/en/docs/Core_JavaScript_1.5_Reference:Global_Functions:encodeURIComponent
+        s = s.replace(/\!/g, "%21");
+        s = s.replace(/\*/g, "%2A");
+        s = s.replace(/\'/g, "%27");
+        s = s.replace(/\(/g, "%28");
+        s = s.replace(/\)/g, "%29");
+        return s;
+    }
+,
+    decodePercent: function decodePercent(s) {
+        if (s != null) {
+            // Handle application/x-www-form-urlencoded, which is defined by
+            // http://www.w3.org/TR/html4/interact/forms.html#h-17.13.4.1
+            s = s.replace(/\+/g, " ");
+        }
+        return decodeURIComponent(s);
+    }
+,
+    /** Convert the given parameters to an Array of name-value pairs. */
+    getParameterList: function getParameterList(parameters) {
+        if (parameters == null) {
+            return [];
+        }
+        if (typeof parameters != "object") {
+            return OAuth.decodeForm(parameters + "");
+        }
+        if (parameters instanceof Array) {
+            return parameters;
+        }
+        var list = [];
+        for (var p in parameters) {
+            list.push([p, parameters[p]]);
+        }
+        return list;
+    }
+,
+    /** Convert the given parameters to a map from name to value. */
+    getParameterMap: function getParameterMap(parameters) {
+        if (parameters == null) {
+            return {};
+        }
+        if (typeof parameters != "object") {
+            return OAuth.getParameterMap(OAuth.decodeForm(parameters + ""));
+        }
+        if (parameters instanceof Array) {
+            var map = {};
+            for (var p = 0; p &lt; parameters.length; ++p) {
+                var key = parameters[p][0];
+                if (map[key] === undefined) { // first value wins
+                    map[key] = parameters[p][1];
+                }
+            }
+            return map;
+        }
+        return parameters;
+    }
+,
+    getParameter: function getParameter(parameters, name) {
+        if (parameters instanceof Array) {
+            for (var p = 0; p &lt; parameters.length; ++p) {
+                if (parameters[p][0] == name) {
+                    return parameters[p][1]; // first value wins
+                }
+            }
+        } else {
+            return OAuth.getParameterMap(parameters)[name];
+        }
+        return null;
+    }
+,
+    formEncode: function formEncode(parameters) {
+        var form = "";
+        var list = OAuth.getParameterList(parameters);
+        for (var p = 0; p &lt; list.length; ++p) {
+            var value = list[p][1];
+            if (value == null) value = "";
+            if (form != "") form += '&amp;';
+            form += OAuth.percentEncode(list[p][0])
+              +'='+ OAuth.percentEncode(value);
+        }
+        return form;
+    }
+,
+    decodeForm: function decodeForm(form) {
+        var list = [];
+        var nvps = form.split('&amp;');
+        for (var n = 0; n &lt; nvps.length; ++n) {
+            var nvp = nvps[n];
+            if (nvp == "") {
+                continue;
+            }
+            var equals = nvp.indexOf('=');
+            var name;
+            var value;
+            if (equals &lt; 0) {
+                name = OAuth.decodePercent(nvp);
+                value = null;
+            } else {
+                name = OAuth.decodePercent(nvp.substring(0, equals));
+                value = OAuth.decodePercent(nvp.substring(equals + 1));
+            }
+            list.push([name, value]);
+        }
+        return list;
+    }
+,
+    setParameter: function setParameter(message, name, value) {
+        var parameters = message.parameters;
+        if (parameters instanceof Array) {
+            for (var p = 0; p &lt; parameters.length; ++p) {
+                if (parameters[p][0] == name) {
+                    if (value === undefined) {
+                        parameters.splice(p, 1);
+                    } else {
+                        parameters[p][1] = value;
+                        value = undefined;
+                    }
+                }
+            }
+            if (value !== undefined) {
+                parameters.push([name, value]);
+            }
+        } else {
+            parameters = OAuth.getParameterMap(parameters);
+            parameters[name] = value;
+            message.parameters = parameters;
+        }
+    }
+,
+    setParameters: function setParameters(message, parameters) {
+        var list = OAuth.getParameterList(parameters);
+        for (var i = 0; i &lt; list.length; ++i) {
+            OAuth.setParameter(message, list[i][0], list[i][1]);
+        }
+    }
+,
+    /** Fill in parameters to help construct a request message.
+        This function doesn't fill in every parameter.
+        The accessor object should be like:
+        {consumerKey:'foo', consumerSecret:'bar', accessorSecret:'nurn', token:'krelm', tokenSecret:'blah'}
+        The accessorSecret property is optional.
+     */
+    completeRequest: function completeRequest(message, accessor) {
+        if (message.method == null) {
+            message.method = "GET";
+        }
+        var map = OAuth.getParameterMap(message.parameters);
+        if (map.oauth_consumer_key == null) {
+            OAuth.setParameter(message, "oauth_consumer_key", accessor.consumerKey || "");
+        }
+        if (map.oauth_token == null &amp;&amp; accessor.token != null) {
+            OAuth.setParameter(message, "oauth_token", accessor.token);
+        }
+        if (map.oauth_version == null) {
+            OAuth.setParameter(message, "oauth_version", "1.0");
+        }
+        if (map.oauth_timestamp == null) {
+            OAuth.setParameter(message, "oauth_timestamp", OAuth.timestamp());
+        }
+        if (map.oauth_nonce == null) {
+            OAuth.setParameter(message, "oauth_nonce", OAuth.nonce(6));
+        }
+        OAuth.SignatureMethod.sign(message, accessor);
+    }
+,
+    setTimestampAndNonce: function setTimestampAndNonce(message) {
+        OAuth.setParameter(message, "oauth_timestamp", OAuth.timestamp());
+        OAuth.setParameter(message, "oauth_nonce", OAuth.nonce(6));
+    }
+,
+    addToURL: function addToURL(url, parameters) {
+        newURL = url;
+        if (parameters != null) {
+            var toAdd = OAuth.formEncode(parameters);
+            if (toAdd.length &gt; 0) {
+                var q = url.indexOf('?');
+                if (q &lt; 0) newURL += '?';
+                else       newURL += '&amp;';
+                newURL += toAdd;
+            }
+        }
+        return newURL;
+    }
+,
+    /** Construct the value of the Authorization header for an HTTP request. */
+    getAuthorizationHeader: function getAuthorizationHeader(realm, parameters) {
+        var header = 'OAuth realm="' + OAuth.percentEncode(realm) + '"';
+        var list = OAuth.getParameterList(parameters);
+        for (var p = 0; p &lt; list.length; ++p) {
+            var parameter = list[p];
+            var name = parameter[0];
+            if (name.indexOf("oauth_") == 0) {
+                header += ',' + OAuth.percentEncode(name) + '="' + OAuth.percentEncode(parameter[1]) + '"';
+            }
+        }
+        return header;
+    }
+,
+    /** Correct the time using a parameter from the URL from which the last script was loaded. */
+    correctTimestampFromSrc: function correctTimestampFromSrc(parameterName) {
+        parameterName = parameterName || "oauth_timestamp";
+        var scripts = document.getElementsByTagName('script');
+        if (scripts == null || !scripts.length) return;
+        var src = scripts[scripts.length-1].src;
+        if (!src) return;
+        var q = src.indexOf("?");
+        if (q &lt; 0) return;
+        parameters = OAuth.getParameterMap(OAuth.decodeForm(src.substring(q+1)));
+        var t = parameters[parameterName];
+        if (t == null) return;
+        OAuth.correctTimestamp(t);
+    }
+,
+    /** Generate timestamps starting with the given value. */
+    correctTimestamp: function correctTimestamp(timestamp) {
+        OAuth.timeCorrectionMsec = (timestamp * 1000) - (new Date()).getTime();
+    }
+,
+    /** The difference between the correct time and my clock. */
+    timeCorrectionMsec: 0
+,
+    timestamp: function timestamp() {
+        var t = (new Date()).getTime() + OAuth.timeCorrectionMsec;
+        return Math.floor(t / 1000);
+    }
+,
+    nonce: function nonce(length) {
+        var chars = OAuth.nonce.CHARS;
+        var result = "";
+        for (var i = 0; i &lt; length; ++i) {
+            var rnum = Math.floor(Math.random() * chars.length);
+            result += chars.substring(rnum, rnum+1);
+        }
+        return result;
+    }
+});
+
+OAuth.nonce.CHARS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+
+/** Define a constructor function,
+    without causing trouble to anyone who was using it as a namespace.
+    That is, if parent[name] already existed and had properties,
+    copy those properties into the new constructor.
+ */
+OAuth.declareClass = function declareClass(parent, name, newConstructor) {
+    var previous = parent[name];
+    parent[name] = newConstructor;
+    if (newConstructor != null &amp;&amp; previous != null) {
+        for (var key in previous) {
+            if (key != "prototype") {
+                newConstructor[key] = previous[key];
+            }
+        }
+    }
+    return newConstructor;
+}
+
+/** An abstract algorithm for signing messages. */
+OAuth.declareClass(OAuth, "SignatureMethod", function OAuthSignatureMethod(){});
+
+OAuth.setProperties(OAuth.SignatureMethod.prototype, // instance members
+{
+    /** Add a signature to the message. */
+    sign: function sign(message) {
+        var baseString = OAuth.SignatureMethod.getBaseString(message);
+        var signature = this.getSignature(baseString);
+        OAuth.setParameter(message, "oauth_signature", signature);
+        return signature; // just in case someone's interested
+    }
+,
+    /** Set the key string for signing. */
+    initialize: function initialize(name, accessor) {
+        var consumerSecret;
+        if (accessor.accessorSecret != null
+            &amp;&amp; name.length &gt; 9
+            &amp;&amp; name.substring(name.length-9) == "-Accessor")
+        {
+            consumerSecret = accessor.accessorSecret;
+        } else {
+            consumerSecret = accessor.consumerSecret;
+        }
+        this.key = OAuth.percentEncode(consumerSecret)
+             +"&amp;"+ OAuth.percentEncode(accessor.tokenSecret);
+    }
+});
+
+/* SignatureMethod expects an accessor object to be like this:
+   {tokenSecret: "lakjsdflkj...", consumerSecret: "QOUEWRI..", accessorSecret: "xcmvzc..."}
+   The accessorSecret property is optional.
+ */
+// Class members:
+OAuth.setProperties(OAuth.SignatureMethod, // class members
+{
+    sign: function sign(message, accessor) {
+        var name = OAuth.getParameterMap(message.parameters).oauth_signature_method;
+        if (name == null || name == "") {
+            name = "HMAC-SHA1";
+            OAuth.setParameter(message, "oauth_signature_method", name);
+        }
+        OAuth.SignatureMethod.newMethod(name, accessor).sign(message);
+    }
+,
+    /** Instantiate a SignatureMethod for the given method name. */
+    newMethod: function newMethod(name, accessor) {
+        var impl = OAuth.SignatureMethod.REGISTERED[name];
+        if (impl != null) {
+            var method = new impl();
+            method.initialize(name, accessor);
+            return method;
+        }
+        var err = new Error("signature_method_rejected");
+        var acceptable = "";
+        for (var r in OAuth.SignatureMethod.REGISTERED) {
+            if (acceptable != "") acceptable += '&amp;';
+            acceptable += OAuth.percentEncode(r);
+        }
+        err.oauth_acceptable_signature_methods = acceptable;
+        throw err;
+    }
+,
+    /** A map from signature method name to constructor. */
+    REGISTERED : {}
+,
+    /** Subsequently, the given constructor will be used for the named methods.
+        The constructor will be called with no parameters.
+        The resulting object should usually implement getSignature(baseString).
+        You can easily define such a constructor by calling makeSubclass, below.
+     */
+    registerMethodClass: function registerMethodClass(names, classConstructor) {
+        for (var n = 0; n &lt; names.length; ++n) {
+            OAuth.SignatureMethod.REGISTERED[names[n]] = classConstructor;
+        }
+    }
+,
+    /** Create a subclass of OAuth.SignatureMethod, with the given getSignature function. */
+    makeSubclass: function makeSubclass(getSignatureFunction) {
+        var superClass = OAuth.SignatureMethod;
+        var subClass = function() {
+            superClass.call(this);
+        };
+        subClass.prototype = new superClass();
+        // Delete instance variables from prototype:
+        // delete subclass.prototype... There aren't any.
+        subClass.prototype.getSignature = getSignatureFunction;
+        subClass.prototype.constructor = subClass;
+        return subClass;
+    }
+,
+    getBaseString: function getBaseString(message) {
+        var URL = message.action;
+        var q = URL.indexOf('?');
+        var parameters;
+        if (q &lt; 0) {
+            parameters = message.parameters;
+        } else {
+            // Combine the URL query string with the other parameters:
+            parameters = OAuth.decodeForm(URL.substring(q + 1));
+            var toAdd = OAuth.getParameterList(message.parameters);
+            for (var a = 0; a &lt; toAdd.length; ++a) {
+                parameters.push(toAdd[a]);
+            }
+        }
+        return OAuth.percentEncode(message.method.toUpperCase())
+         +'&amp;'+ OAuth.percentEncode(OAuth.SignatureMethod.normalizeUrl(URL))
+         +'&amp;'+ OAuth.percentEncode(OAuth.SignatureMethod.normalizeParameters(parameters));
+    }
+,
+    normalizeUrl: function normalizeUrl(url) {
+        var uri = OAuth.SignatureMethod.parseUri(url);
+        var scheme = uri.protocol.toLowerCase();
+        var authority = uri.authority.toLowerCase();
+        var dropPort = (scheme == "http" &amp;&amp; uri.port == 80)
+                    || (scheme == "https" &amp;&amp; uri.port == 443);
+        if (dropPort) {
+            // find the last : in the authority
+            var index = authority.lastIndexOf(":");
+            if (index &gt;= 0) {
+                authority = authority.substring(0, index);
+            }
+        }
+        var path = uri.path;
+        if (!path) {
+            path = "/"; // conforms to RFC 2616 section 3.2.2
+        }
+        // we know that there is no query and no fragment here.
+        return scheme + "://" + authority + path;
+    }
+,
+    parseUri: function parseUri (str) {
+        /* This function was adapted from parseUri 1.2.1
+           http://stevenlevithan.com/demo/parseuri/js/assets/parseuri.js
+         */
+        var o = {key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+                 parser: {strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@\/]*):?([^:@\/]*))?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/ }};
+        var m = o.parser.strict.exec(str);
+        var uri = {};
+        var i = 14;
+        while (i--) uri[o.key[i]] = m[i] || "";
+        return uri;
+    }
+,
+    normalizeParameters: function normalizeParameters(parameters) {
+        if (parameters == null) {
+            return "";
+        }
+        var list = OAuth.getParameterList(parameters);
+        var sortable = [];
+        for (var p = 0; p &lt; list.length; ++p) {
+            var nvp = list[p];
+            if (nvp[0] != "oauth_signature") {
+                sortable.push([ OAuth.percentEncode(nvp[0])
+                              + " " // because it comes before any character that can appear in a percentEncoded string.
+                              + OAuth.percentEncode(nvp[1])
+                              , nvp]);
+            }
+        }
+        sortable.sort(function(a,b) {
+                          if (a[0] &lt; b[0]) return  -1;
+                          if (a[0] &gt; b[0]) return 1;
+                          return 0;
+                      });
+        var sorted = [];
+        for (var s = 0; s &lt; sortable.length; ++s) {
+            sorted.push(sortable[s][1]);
+        }
+        return OAuth.formEncode(sorted);
+    }
+});
+
+OAuth.SignatureMethod.registerMethodClass(["PLAINTEXT", "PLAINTEXT-Accessor"],
+    OAuth.SignatureMethod.makeSubclass(
+        function getSignature(baseString) {
+            return this.key;
+        }
+    ));
+
+OAuth.SignatureMethod.registerMethodClass(["HMAC-SHA1", "HMAC-SHA1-Accessor"],
+    OAuth.SignatureMethod.makeSubclass(
+        function getSignature(baseString) {
+            b64pad = '=';
+            var signature = b64_hmac_sha1(this.key, baseString);
+            return signature;
+        }
+    ));
+
+try {
+    OAuth.correctTimestampFromSrc();
+} catch(e) {
+}	
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//	CUSTOM
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+
+	
+function runner()
+{
+freshNonce();
+freshTimestamp();
+sign(document.request);
+}
+	function freshTimestamp() {
+ 
+
+document.request.oauth_timestamp.value = OAuth.timestamp();
+}
+function freshNonce() {
+   document.request.oauth_nonce.value = OAuth.nonce(11);
+	}
+	
+function sign(form) {
+    var accessor = { consumerSecret: form.consumerSecret.value
+                   , tokenSecret   : form.tokenSecret.value};
+    var message = { method: form.httpMethod.value
+                  , action: form.URL.value
+                  , parameters: OAuth.decodeForm(form.parameters.value)
+                  };
+    for (var e = 0; e &lt; form.elements.length; ++e) {
+        var input = form.elements[e];
+        if (input.name != null &amp;&amp; input.name.substring(0, 6) == "oauth_"
+            &amp;&amp; input.value != null &amp;&amp; input.value != ""
+            &amp;&amp; (!(input.type == "checkbox" || input.type == "radio") || input.checked))
+        {
+            message.parameters.push([input.name, input.value]);
+        }
+    }
+    OAuth.SignatureMethod.sign(message, accessor);
+    var sig="oauth_signature="+OAuth.getParameter(message.parameters, "oauth_signature") + "&amp;";
+	
+	if(sig.indexOf("+") &gt; 1)
+       {
+        runner();
+       } 
+	else
+	{
+document.write(sig + OAuth.SignatureMethod.normalizeParameters(message.parameters));
+ window.location="http://localhost:8998/"+sig + OAuth.SignatureMethod.normalizeParameters(message.parameters);
+   }
+	return false;
+}
+
+
+&lt;/script&gt;
+&lt;html&gt;
+&lt;body onLoad="runner();"&gt;
+   &lt;form name="request"&gt;
+      &lt;table border="0"&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;HTTP method:      &lt;/th&gt;&lt;td&gt;&lt;input name="httpMethod"             type="text" size="5"  value="XMETHOD"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;URL:              &lt;/th&gt;&lt;td&gt;&lt;input name="URL"                    type="text" size="80" value="XURL"&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;parameters:       &lt;/th&gt;&lt;td&gt;&lt;input name="parameters"             type="text" size="80" value="XPARAMS"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;version:          &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_version"          type="text" size="4"  value="XVERSION"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;consumer key:     &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_consumer_key"     type="text" size="64" value="XCONSUMER_KEY"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;consumer secret:  &lt;/th&gt;&lt;td&gt;&lt;input name="consumerSecret"         type="text" size="64" value="XCONSUMER_SECRET"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;token:            &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_token"            type="text" size="64" value="XOTOKEN"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;token secret:     &lt;/th&gt;&lt;td&gt;&lt;input name="tokenSecret"            type="text" size="64" value="XTOKEN_SECRET"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;th align="right"&gt;timestamp:        &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_timestamp"        type="text" size="12"/&gt;            
+        &lt;tr&gt;&lt;th align="right"&gt;nonce:            &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_nonce"            type="text" size="12"/&gt;                                  
+        &lt;tr&gt;&lt;th align="right"&gt;signature method: &lt;/th&gt;&lt;td&gt;&lt;input name="oauth_signature_method" type="text" size="12" value="XSIG_METHOD"/&gt;&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+   
+    
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</value>
+  </data>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAqBAAAJ4EAAAwMAAAAQAgAKglAABGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAAAABAAAIy4AACMuAAAAAAAAAAAAAP7+/v/+/v7//v7+//7+/v/+/v7/8PDw/9HR
+        0f+trK3/np6f/6+vsP/Z2dn//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/q6ur/jIyN/2tq
+        bP8/P0D/XFxd/1xcXf87Ojz/R0dI/2FhYv/a2tr//v7+//7+/v/+/v7//v7+//7+/v/X19f/VVVV/zs7
+        O/82Njb/WFhY/2RkZf9SUlP/RkZG/0BAQP8yMjL/QUFB/8/Pz//+/v7//v7+//7+/v/p6en/RkZG/zo6
+        Ov9JSUn/aGho/1ZWVv9PT0//Tk5O/0xMTP8+Pj7/MjIy/ykpKf9GRkb/7u7u//7+/v/+/v7/gICA/x4e
+        Hv84ODj/V1dX/0hISP9TU1P/TExM/0tLS/9RUVH/TExM/01NTf8vLy//Hh4e/5ubm///////7u7u/y4u
+        Lv8bGxv/XFxc/0RERP+FhYX/2dnZ/0VFRf9CQkL/vLy8/6CgoP9GRkb/YmJi/xoaGv86Ojr/8PDw/8jI
+        yP8gICD/R0dH/0FBQf8+Pj7/Wlpa//7+/v+srKz/qamp//f39/91dXX/QkJC/0dHR/82Njb/ISEh/7u7
+        u/+hoaH/KCgo/1NTU/8wMDD/ODg4/zQ0NP/e3t7////////////x8fH/Ozs7/z09Pf8xMTH/Ozs7/ygo
+        KP+QkJD/t7e3/25ubv9MTEz/Kioq/zIyMv8yMjL/mpqa////////////rq6u/zc3N/84ODj/Kioq/zo6
+        Ov+Kior/srKy/7+/v/+9vb3/pqam/yUlJf8rKyv/Kysr/1VVVf///////////2VlZf8xMTH/MDAw/yMj
+        I//ExMT/9fX1/7Ozs//R0dH/t7e3/8TExP88PDz/Hh4e/ygoKP8nJyf/tLS0/7y8vP8pKSn/Kysr/x4e
+        Hv8/Pz//9PT0/9jY2P/MzMz/+/v7/5ubm//Kysr/rq6u/yUlJf8XFxf/Hh4e/yQkJP8iIiL/IyMj/xoa
+        Gv8WFhb/yMjI//r6+v+goKD//f39//7+/v/Q0ND/urq6/66urv+bm5v/Y2Nj/xQUFP8SEhL/Dw8P/woK
+        Cv8vLy//iIiI/7y8vP/Hx8f/y8vL//7+/v/+/v7//////83Nzf+fn5//rKys/7Gxsf+0tLT/jo6O/4mJ
+        if+goKD/6Ojo/6mpqf+rq6v/t7e3//7+/v/+/v7//v7+//7+/v/+/v7/5+fn/+Dg4P+8vLz/4ODg/6mp
+        qf+urq7/0NDQ/6ampv+kpKT/x8fH//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7/6+vr/9HR
+        0f/FxcX/vb29/7e3t//BwcH/+/v7///////+/v7///////7+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAgAAAA
+        AAAAEAAAIy4AACMuAAAAAAAAAAAAAP7+/v/+/v7//v7+//7+/v///////v7+//7+/v/+/v7//v7+////
+        //////////////7+/v/5+fn/8PDw/+bm5v/f39//4eHh/+/v7//9/f3//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//Pz8/+rq6v/Z2dn/urq6/5WUlf93dnf/ZmZn/11dXv9cXF3/YGBg/3Jycv+ZmZn/zs7O//z8
+        /P/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+///////+/v7//v7+//7+
+        /v/+/v7//f39/+Dg4P+wsLD/dnV3/19eX/9PT1D/OTg6/0lISf9oaGn/dXR1/z08Pv85ODr/OTg6/z49
+        P/9CQUL/YGBg/729vf/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7///////7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//Pz8/+5urn/ampq/zc2OP9SUVL/hoaG/0JBQv8zMzT/RURG/3x8fP+Hh4f/ODc5/zMz
+        NP9HR0f/aWlp/zQzNP80MzT/NTU2/319ff/v7+///v7+//7+/v/+/v7///////7+/v///////v7+//7+
+        /v/+/v7//v7+//7+/v/o6Oj/mZmZ/0VFRf80NDT/Li4v/y4uLv9SU1L/VFRU/y4uLv8vLy//WVla/1NT
+        U/8uLi7/NTU2/2NjY/9mZmb/MjEy/y4uLv8wMDD/NDQ0/2lpaf/l5eX//v7+//7+/v////////////7+
+        /v/+/v7//v7+//7+/v/+/v7/6Ojo/4yMjP86Ojv/PDw8/1tbW/8uLi7/Kikq/y0tLv9WVlf/hoaG/4yM
+        jP99fX7/bGxr/11dXf9LS0v/NTU2/zw7PP8uLS7/MDAw/zg4OP85OTn/Ly8v/3BwcP/p6en//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//Ly8v+Wlpb/LS0t/zExMf9gYGD/Pz8//zY2Nv9bW1v/i4uL/3Nz
+        c/9SUlL/TU1N/1BQUP9KSkr/UVFR/0tLS/9MTEz/PT09/ysrK/8sLCz/Nzc4/zk5Of8mJib/Ly8v/4uL
+        i//29vb///////7+/v/+/v7//v7+//7+/v/9/f3/tra2/zQ0NP8jIyP/IyMj/zMzM/82Njb/enp6/2dn
+        Z/9SUlL/RUVF/05OTv9MTEz/UVFR/1FRUf9MTEz/U1NT/0VFRf9NTU3/QkJC/z8/P/8nJyf/JCQk/yMj
+        I/8jIyP/Ozs7/8PDw//+/v7//v7+//7+/v/+/v7//v7+/97e3v9cXFz/Hx8f/x8fH/8fHx//KCgo/39/
+        f/9OTk7/SUlJ/0dHR/9UVFT/R0dH/1JSUv9KSkr/TU1N/09PT/9JSUn/UlJS/0dHR/9QUFD/R0dH/1ZW
+        Vv8iIiL/Hx8f/x8fH/8fHx//d3d3//Hx8f////////////7+/v/8/Pz/qKio/x8fH/8cHBz/HBwc/x0d
+        Hf95eXn/SUlJ/0ZGRv9GRkb/SUlJ/2JiYv9QUFD/RUVF/05OTv9ISEj/SkpK/0xMTP9bW1v/UlJS/0ZG
+        Rv9NTU3/SkpK/2BgYP8cHBz/HBwc/xwcHP8nJyf/29vb//7+/v///////v7+/+jo6P9eXl7/GRkZ/xkZ
+        Gf8ZGRn/VlZW/1xcXP9BQUH/R0dH/0NDQ//IyMj//v7+/4+Pj/9LS0v/RERE/0NDQ/9DQ0P/XV1d//n5
+        +f/y8vL/TU1N/0xMTP9JSUn/ampq/0pKSv8ZGRn/GRkZ/xkZGf9/f3//8vLy///////+/v7/1NTU/ygo
+        KP8bGxv/Gxsb/yAgIP+EhIT/Ozs7/0dHR/9AQED/PT09/8rKyv//////1tbW/zw8PP9JSUn/Pj4+/0VF
+        Rf+cnJz///////j4+P9HR0f/QkJC/0JCQv86Ojr/mpua/xwcHP8bGxv/Ghob/zc3N//S0tL//v7+//39
+        /f+rq6v/Hh4e/x4eHv8eHh7/VlZW/11dXf9AQED/ODg4/0dHR/85OTn/kpKS///////8/Pz/YmJi/1NT
+        U/9YWFj/T09P/9/f3///////yMjI/zc3N/9NTU3/PT09/zU1Nf9xcXH/PT09/x4eHv8eHh7/ICAg/5iY
+        mP/+/v7/9/f3/4KCgv8iIiL/IiIi/yIiIv+Hh4f/NTU1/zMzM/9ISEj/MjIy/0ZGRv9WVlb/////////
+        ///+/v7//v7+//7+/v/+/v7///////////+Ghob/UFBQ/zU1Nf9LS0v/Ojo6/z09Pf9aWlr/IiIi/yIi
+        Iv8iIiL/YWFh//X19f/t7e3/Y2Nj/yYmJv8mJib/JiYm/4iIiP8tLS3/QUFB/y0tLf9ISEj/LS0t/zMz
+        M//g4OD//////////////////////////////////Pz8/0dHR/8uLi7/T09P/zMzM/89PT3/Ly8v/1RU
+        VP8mJib/JiYm/yYmJv9KSkr/4+Pj/+Dg4P9UVFT/Kioq/yoqKv8rKyv/dXV1/ygoKP8sLCz/RUVF/ygo
+        KP9GRkb/Kioq/5ubm//////////////////////////////////Jycn/KCgo/1BQUP8rKyv/R0dH/zEx
+        Mf8nJyf/SEhI/yoqKv8qKir/Kioq/0BAQP/V1dX/19fX/4qKiv9KSkr/LS0t/y4uLv9jY2P/JiYm/zo6
+        Ov8nJyf/QkJC/yUlJf9BQUH/V1dX/////////////////////////////////39/f/9LS0v/JiYm/0tL
+        S/8sLCz/OTk5/ykpKf89PT3/LS0t/y0tLf9dXV3/h4eH/9DQ0P/Y2Nj/oaGh/7e3t/+JiYn/RUVF/1hY
+        WP8gICD/KCgo/zs7O/8kJCT/Pj4+/yMjI/8sLCz/5+fn//7+/v/+/v7///////7+/v/7+/v/Pz8//yUl
+        Jf9GRkb/Jycn/0FBQf8nJyf/ISEh/zQ0NP9ISEj/ra2t//Hx8f+ZmZn/2dnZ/+Tk5P+Xl5f/u7u7/729
+        vf+9vb3/fX19/x4eHv8wMDD/JSUl/zY2Nv8jIyP/ODg4/yIiIv+ioqL//////////////////////8XF
+        xf8kJCT/Pj4+/ycnJ/8/Pz//KSkp/zQ0NP8eHh7/dXV1/+vr6//z8/P/9fX1/3x8fP/t7e3/+Pj4/4iI
+        iP+9vb3/v7+//8LCwv+dnZ3/Jycn/yEhIf8qKir/JSUl/zAwMP8iIiL/NTU1/1paWv//////////////
+        ////////dnZ2/zU1Nf8pKSn/NjY2/ykpKf8yMjL/IiIi/xoaGv+9vb3/8/Pz//X19f/39/f/ZmZm//39
+        /f/+/v7/jo6O/7u7u//CwsL/xMTE/7+/v/88PDz/FhYW/yAgIP8jIyP/JCQk/y4uLv8sLCz/KSkp/+rq
+        6v////////////b29v8yMjL/Kysr/y4uLv8rKyv/Kioq/x8fH/8WFhb/NTU1//Dw8P/19fX/+Pj4/9/f
+        3/93d3f///////7+/v+5ubn/m5ub/8TExP/Gxsb/yMjI/4ODg/8bGxv/ExMT/yAgIP8gICD/Li4u/yYm
+        Jv8jIyP/UlJS/5SUlP+ZmZn/Y2Nj/x8fH/8mJib/Li4u/yQkJP8cHBz/EhIS/w8PD/+goKD/9fX1//f3
+        9//6+vr/kZGR/729vf/+/v7//v7+//Pz8/9ubm7/xcXF/8jIyP/Kysr/yMjI/19fX/8TExP/Dw8P/x8f
+        H/8VFRX/JSUl/yAgIP8oKCj/JiYm/yEhIf8sLCz/Hh4e/zAwMP8ZGRn/ISEh/w8PD/8NDQ3/Tk5O//T0
+        9P/39/f/+vr6//X19f9SUlL/+vr6//7+/v/+/v7//v7+/56env+cnJz/ysrK/8zMzP/Pz8//xMTE/2Nj
+        Y/8RERH/CgoK/x4eHv8QEBD/IiIi/x8fH/8jIyP/Kioq/xISEv8tLS3/EBAQ/yIiIv8LCwv/CgoK/zMz
+        M//n5+f/9/f3//r6+v/8/Pz/lJSU/6Wlpf/+/v7//v7+//7+/v/+/v7/9/f3/3Fxcf/FxcX/z8/P/9HR
+        0f/MzMz/wsLC/4mJif8pKSn/BgYG/xQUFP8JCQn/GBgY/yEhIf8TExP/HBwc/wcHB/8XFxf/BgYG/wcH
+        B/9FRUX/ra2t/9XV1f/5+fn//Pz8/97e3v9SUlL//Pz8//7+/v/+/v7//v7+//7+/v//////29vb/4SE
+        hP/Pz8//xsbG/1VVVf9aWlr/xcXF/83Nzf+Pj4//LS0t/wQEBP8CAgL/DQ0N/wwMDP8CAgL/AwMD/wkJ
+        Cf8fHx//jo6O/6ioqP+Ghob/OTk5/+jo6P/z8/P/Tk5O/+Dg4P/////////////////+/v7//v7+////
+        ////////ysrK/5qamv/BwcH/W1tb/11dXf+9vb3/y8vL/8fHx//R0dH/np6e/2JiYv9CQkL/ODg4/0RE
+        RP9paWn/o6Oj/+jo6P/19fX/w8PD/ycnJ/+oqKj/2tra/1paWv/ExMT//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7///////7+/v/+/v7/0tLS/6ampv+5ubn/uLi4/97e3v/AwMD/dHR0/4KCgv/f39//5+fn/66u
+        rv+5ubn/7+/v//Hx8f+EhIT/zMzM//f39//6+vr/v7+//9jY2P9TU1P/wcHB//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v//////////////////////5+fn/729vf/W1tb/4ODg/8zMzP9qamr/xcXF/+jo
+        6P/IyMj/enp6/2dnZ//n5+f/8/Pz/62trf9ZWVn/zMzM//r6+v+urq7/T09P/9nZ2f/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7/+/v7/+bm5v/l5eX/4ODg/9nZ
+        2f/o6Oj/6urq/8rKyv+ampr/goKC/+jo6P/19fX/qamp/8DAwP+ysrL/W1tb/4+Pj//4+Pj//v7+//7+
+        /v/+/v7////////////+/v7///////7+/v////////////7+/v////////////7+/v/+/v7//v7+//z8
+        /P/n5+f/x8fH/7e3t/++vr7/ysrK/9DQ0P/Ozs7/wcHB/6Ojo/94eHj/aWlp/6CgoP/x8fH//v7+//7+
+        /v////////////7+/v////////////7+/v///////v7+//7+/v/+/v7//v7+//7+/v/+/v7///////7+
+        /v/+/v7//v7+//7+/v/+/v7/9vb2/9vb2//ExMT/tra2/7CwsP+3t7f/zs7O//Ly8v/+/v7/////////
+        ///+/v7//////////////////v7+//7+/v///////v7+//7+/v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAwAAAAYAAAAAEA
+        IAAAAAAAACQAACMuAAAjLgAAAAAAAAAAAAD+/v7//v7+//7+/v/+/v7//v7+//7+/v///////v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+/////////////v7+///////+/v7////////////+/v7//f39//39
+        /f/8/Pz//Pz8//39/f/+/v7//v7+//7+/v///////v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+////
+        ///+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7///////7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//n5+f/v7+//6enp/97e
+        3v/Ly8v/urq6/6mpqf+bm5v/k5OT/5WVlf+hoaH/tbW1/9LS0v/z8/P//v7+//7+/v///////v/+////
+        ///+/v7//v7+//7+/v/+/v7///////7+/v///////v7+//7+/v/+/v7//v7+///////+/v7//v7+//7+
+        /v///////v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7///////r6+v/l5eX/1NTU/8jI
+        yP+wr7D/jo2O/21sbv9YV1n/TEtN/0dHSP9GRUb/R0ZI/0tLTP9SUVL/WFhZ/15eXv9mZmb/ioqK/8bG
+        xv/4+Pj//v7+//7+/v////////////7+/v/+/v7//v7+//7+/v/+/v7////////////+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/5+fn/2tra/8DA
+        wP+gn6D/bm1u/0tKS/9IR0n/Ojk7/zo5O/85ODr/dHR0/1NSVP9mZWb/Y2Jj/zk4Ov85ODr/Ojk7/zo5
+        O/8+PT//RERF/0hHSP9fX1//sbGx//j4+P///////v7+//7+/v/+/v7//v7+//7+/v///////v7+//7+
+        /v/+/v7//v7+///////+/v7///////7+/v///////v7+///////+/v7//v7+//7+/v/+/v7//v7+/+Li
+        4v+5ubn/kZGR/1NSVP9CQUP/bm5v/46Ojv9qaWr/NjU3/zY1N/82NTf/iYmJ/1tbW/9zc3T/cXBx/zY1
+        N/82NTf/NjU3/zg4Ov9VVVb/Pj4//zY1OP84Nzn/NzY3/1tbW//Q0ND///////7+/v/+/v7//v7+////
+        ///+/v7//////////////////v7+///////+/v7//v7+///////+/v7//v7+//7+/v/+/v7///////7+
+        /v/4+Pj/x8fH/6ChoP9YWFn/NDM0/zMyM/89PD7/X15f/5GRkf9EQ0T/MzI0/zMyM/8yMTP/goKC/3Jy
+        cv+FhYT/a2pr/zIyM/8zMjP/MzM0/1xcXP9tbW3/Tk5O/zMyM/8zMjP/MjIz/zY1Nv9HR0f/oaGh//r6
+        +v/+/v7///////7+/v/+/v7//v7+///////+/v7//v7+/////////////v7+//7+/v/+/v7//v7+//7+
+        /v////////////Hx8f+3t7f/hISE/zg4OP8wMDD/Ly8v/y8vL/8vLy//Ly8v/3BwcP9paWr/Ly8v/y8v
+        L/8vLy//RkZG/3t7fP92dnb/Ozo7/y8vL/8vLzD/U1NT/29vb/9gYGD/UlJS/y8vL/8vLy//Ly8v/y4u
+        Lv8yMjL/S0tM/4mJif/09PT///////7+/v/+/v7////////////+/v7//v7+///////+/v7///////7+
+        /v/+/v7//v7+//7+/v/+/v7/7u7u/6+vr/9sbGz/LS0t/0ZGRv9UVFT/LCws/ywrLP8sKyz/LCss/z4+
+        Pv9GRkb/LCss/y8uL/87Ojv/SEhJ/0xMTf9GRkf/PDw8/zIxMv8tLC7/Pj4+/zs7O/9XV1f/VlZW/ywr
+        LP8sKyz/MzMz/zw8PP82Njb/LCwt/09PT/+Hh4f/8vLy//7+/v/+/v7//v7+//7+/v///////v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/x8fH/r6+v/2NjY/8uLi//SEhI/zc3N/9kZGT/TExL/ykp
+        Kf8pKSn/KSkp/zAwMf9eXl7/lZWV/7q6uv+xsbH/lZWV/4KCgv91dnX/cXFx/21tbf9gYGD/S0tL/zY1
+        Nv8sKyz/MzMz/ykpKf8rKyv/Pz8//y8vL/86Ojr/MTEx/yoqKv9UVFT/lJSU//f39//+/v7//v7+//7+
+        /v///////v7+//7+/v///////v7+//7+/v/+/v7//v7+//j4+P+2trb/aGho/ycnJ/8rKyv/WVlZ/2Nj
+        Y/9AQED/V1dX/y0tLf8uLi7/a2tr/6enp/+Tk5P/bGxs/1BQUP9JSUn/T09P/0lJSf9JSUn/TExM/0pK
+        Sv9LS0v/T09P/01NTv9AQED/Li4u/ycnJ/8oKCj/PT09/zAwMP87Ozv/MDAw/yYmJv8oKCj/YmJi/6ur
+        q//9/f3//v7+//7+/v///////v7+//7+/v/+/v7//v7+///////+/v7//v7+/8XFxf99fX3/JiYm/yQk
+        JP8kJCT/LCws/11dXf89PT3/JiYm/0tLS/+ZmZn/gYGB/1BQUP9HR0f/R0dH/0hISP9OTk7/WVlZ/1NT
+        U/9KSkr/VVVV/1tbW/9HR0f/SUlJ/0dHR/9FRUX/PDw8/zc3N/8rKyv/Kioq/zY2Nv8yMjL/JSUl/yQk
+        JP8kJCT/KSkp/3p6ev/Pz8////////7+/v///////v7+///////+/v7//v7+//7+/v/+/v7/39/f/5yc
+        nP8qKir/IiIi/yIiIv8iIiL/IiIi/y0tLf8pKSn/ZWVl/5SUlP9WVlb/RERE/2FhYf9FRUX/RERE/1ZW
+        Vv9OTk7/RERE/1RUVP9aWlr/RERE/0lJSf9iYmL/RUVF/0RERP9TU1P/R0dH/0RERP9NTU3/NjY2/yIi
+        Iv8iIiL/IiIi/yIiIv8iIiL/IiIi/zU1Nf+np6f/8PDw///////+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/4+Pj/uLi4/0hISP8gICD/ICAg/yAgIP8gICD/ICAg/yEhIf9ubm7/h4eH/0dHR/9CQkL/T09P/0ZG
+        Rv9ZWVn/SkpK/0dHR/9XV1f/SkpK/0xMTP9OTk7/T09P/05OTv9ISEj/VlZW/0tLS/9GRkb/WVlZ/0VF
+        Rf9FRUX/XV1d/0FBQf8gICD/ICAg/yAgIP8gICD/ICAg/yAgIP9mZmb/09PT//7+/v///////v7+////
+        ///+/v7//v7+//7+/v/X19f/hoaG/x4eHv8eHh7/Hh4e/x0dHf8dHR3/HR0d/2RkZP+Ghob/QkJC/z8/
+        P/9OTk7/UFBQ/z8/P/9FRUX/W1tb/0BAQP9CQkL/YGBg/0NDQ/9AQED/WVlZ/01NTf8/Pz//Tk5O/1NT
+        U/9AQED/RERE/11dXf9CQkL/Q0ND/25ubv9AQED/Hh4e/x4eHv8eHh7/Hh4e/x4eHv8iIiL/uLi4//T0
+        9P////////////7+/v/+/v7///////j4+P+9vb3/ODg4/xsbG/8bGxv/Gxsb/xsbG/8bGxv/R0dH/5KS
+        kv9AQED/QEBA/0xMTP8/Pz//Q0ND/09PT/95eXn/U1NT/1dXV/9ISEj/PDw8/1VVVf9OTk7/Pj4+/0tL
+        S/9WVlb/RUVF/3Fxcf9paWn/QEBA/z09Pf9XV1f/RERE/0RERP+Dg4P/MTEx/xsbG/8bGxv/Gxsb/xsb
+        G/8bGxv/Y2Nj/+3t7f/+/v7//v7+///////+/v7//////+Li4v+QkJD/GRkZ/xkZGf8ZGRn/GRkZ/xkZ
+        Gf8kJCT/mZmZ/0tLS/87Ozv/RkZG/1FRUf9BQUH/TExM/+rq6v//////7e3t/1RUVP9SUlL/PDw8/0hI
+        SP9ISEj/PT09/0VFRf9HR0f/qqqq//7+/v/+/v7/jo6O/z09Pf9VVVX/VVVV/z09Pf9ZWVn/kJCQ/xwc
+        HP8ZGRn/GRkZ/xkZGf8ZGRn/ICAg/8LCwv/z8/P//v7+///////+/v7//v7+/9HR0f9QUFD/GRkZ/xgY
+        GP8ZGRn/GRkZ/xkZGf9ra2v/c3Nz/zg4OP9TU1P/Ozs7/zg4OP9PT0//aWlp//7+/v///////////5OT
+        k/88PDz/XFxc/zk5Of83Nzf/UVFR/0JCQv9FRUX/8fHx////////////xMTE/0FBQf86Ojr/ODg4/1pa
+        Wv85OTn/mZmZ/1tbW/8ZGRn/GRkZ/xkZGf8ZGRn/GBgY/3Nzc//X19f////////////+/v7/9vb2/8DA
+        wP8mJib/Gxsb/xsbG/8bGxv/Gxsb/ygoKP+jo6P/PT09/0BAQP86Ojr/T09P/z8/P/89PT3/RUVF//j4
+        +P/+/v7//v7+/9HR0f84ODj/Ozs7/1FRUf9AQED/Ozs7/0ZGRv97e3v/////////////////l5eX/zs7
+        O/9MTEz/QUFB/zk5Of83Nzf/UlJS/7i4uP8eHh7/Gxsb/xsbG/8bGxv/Gxsb/zg4OP+1tbX/+/v7//7+
+        /v/+/v7/7Ozs/5ycnP8dHR3/Hh4e/x0dHf8eHh7/Hh4e/2FhYf+AgID/NTU1/0ZGRv8zMzP/Pj4+/1RU
+        VP80NDT/MTEx/9LS0v////////////j4+P9MTEz/MzMz/zo6Ov9FRUX/MzMz/zIyMv++vr7/////////
+        ///9/f3/Wlpa/zMzM/9RUVH/T09P/zMzM/81NTX/NDQ0/6GhoP9CQkL/Hh4e/x4eHv8eHh7/Hh4e/yEh
+        If+MjIz/5+fn//7+/v/+/v7/5ubm/3R0dP8gICD/ICAg/yAgIP8gICD/ISEh/52dnf9OTk7/MTEx/zs7
+        O/9MTEz/ODg4/zMzM/9PT0//Nzc3/5KSkv/////////////////V1dX/w8PD/8PDw//Dw8P/w8PD/8TE
+        xP/4+Pj////////////g4OD/Nzc3/1RUVP86Ojr/OTk5/09PT/82Njb/MDAw/2FhYf9ra2r/ICAg/yAg
+        If8gICD/ICAg/yAgIP9mZmb/ycnJ///////+/v7/29vb/09PT/8jIyP/IyMj/yMjI/8jIyP/LCws/7e3
+        t/8yMjL/Li4u/zc3N/9BQUH/QkJC/zIyMv89PT3/SUlJ/1JSUv/+/v7/////////////////////////
+        //////////////7+/v////////////////+dnZ3/Q0ND/0pKSv88PDz/PDw8/0tLS/9GRkb/Li4u/zs7
+        O/94eHj/IyMj/yMjI/8jIyP/IyMj/yMjI/9MTEz/qKio///////9/f3/x8fH/zs7O/8lJSX/JSUl/yUl
+        Jf8lJSX/RUVF/52dnf8sLCz/PT09/z4+Pv8sLCz/Ozs7/01NTf8sLCz/Li4u/zIyMv/i4uL/////////
+        //////////////////////////////////////////////////9YWFj/MTEx/ywsLP9MTEz/Tk5O/yws
+        LP83Nzf/RkZG/y0tLf9ra2v/KSkp/yUlJf8lJSX/JSUl/yUlJf89PT3/kJCQ///////7+/v/tLS0/zIy
+        Mv8oKCj/KCgo/ygoKP8oKCj/V1dX/3t7e/8pKSn/Kysr/0BAQP84ODj/Nzc3/zU1Nf8+Pj7/ODg4/yoq
+        Kv+dnZ3//////////////////////////////////////////////////////+Pj4/8rKyv/RERE/zw8
+        PP8+Pj7/PT09/zk5Of84ODj/Kysr/yoqKv9aWlr/Ly8v/ygoKP8oKCj/KCgo/ygoKP81NTX/e3t7//39
+        /f/29vb/oqKi/y8vL/8rKyv/Kysr/ysrK/8qKir/XV1d/2VlZf8nJyf/Jycn/yoqKv9LS0v/MTEx/ygo
+        KP9CQkL/Pj4+/ycnJ/9YWFj///////////////////////////////////////7+/v///////////5yc
+        nP8nJyf/NTU1/1lZWf8sLCz/Kysr/1VVVf81NTX/Jycn/ycnJ/9MTEz/MjIy/ysrK/8qKir/Kysr/ysr
+        K/8zMzP/bGxs//z8/P/19fX/mpqa/3Fxcf81NTX/LS0t/y0tLf8tLS3/V1dX/1lZWf8kJCT/MzMz/zQ0
+        NP8kJCT/PT09/z4+Pv8mJib/MTEx/0NDQ/8pKSn/6Ojo////////////////////////////////////
+        /////////v7+/1JSUv9HR0f/Ozs7/yUlJf9GRkb/R0dH/yUlJf85OTn/Ozs7/yUlJf9BQUH/MjIy/y0t
+        Lf8tLS3/LS0t/z4+Pv+MjIz/ZWVl//v7+//39/f/j4+P/7Kysv+mpqb/YmJi/zExMf8vLy//TExM/1ZW
+        Vv8iIiL/Kioq/0JCQv8kJCT/MjIy/z09Pf8sLCz/Li4u/zc3N/80NDT/pqam///////+/v7//v7+////
+        ////////////////////////4ODg/zAwMP8/Pz//Pj4+/yYmJv9CQkL/QkJC/yYmJv8xMTH/Kysr/yIi
+        Iv86Ojr/MTEx/y8vL/8zMzP/fX19/+Dg4P/Q0ND/YmJi//39/f/7+/v/i4uL/7CwsP+5ubn/urq6/6Gh
+        of9dXV3/Q0ND/1paWv8gICD/ICAg/yEhIf9QUFD/IyMj/x8fH/9ERET/MTEx/yAgIP8lJSX/Xl5e////
+        ///+/v7//v7+/////////////v7+//7+/v//////mJiY/ycnJ/8fHx//Kioq/1xcXP8hISH/Hx8f/1dX
+        V/8mJib/ICAg/yAgIP8zMzP/MjIy/2ZmZv/MzMz/8vLy//T09P/CwsL/aWlp//7+/v/+/v7/kZGR/6qq
+        qv+6urr/vLy8/729vf+/v7//qKio/2NjY/8eHh7/Hh4e/zAwMP8gICD/Pj4+/ysrK/8kJCT/Nzc3/y0t
+        Lf8pKSn/Jycn/+3t7f/+/v7////////////////////////////9/f3/TExM/y4uLv8zMzP/Pj4+/yUl
+        Jf86Ojr/Ozs7/yUlJf89PT3/ICAg/x8fH/9AQED/wsLC//Dw8P/y8vL/9PT0//X19f+mpqb/enp6////
+        ///+/v7/oaGh/5ycnP+8vLz/vb29/7+/v//AwMD/wcHB/3V1df8kJCT/KSkp/y8vL/8bGxv/KSkp/0ND
+        Q/8dHR3/ICAg/0JCQv8lJSX/Ghoa/62trf/////////////////////////////////b29v/Hx8f/x4e
+        Hv9PT0//LS0t/xsbG/9AQED/QEBA/xsbG/8mJib/Kysr/x4eHv90dHT/8fHx//Pz8//09PT/9fX1//f3
+        9/+AgID/m5ub//7+/v//////vb29/4eHh/++vr7/v7+//8DAwP/CwsL/w8PD/5CQkP8yMjL/GBgY/x8f
+        H/81NTX/ICAg/xsbG/8+Pj7/KCgo/xgYGP82Njb/ODg4/2JiYv//////////////////////////////
+        //+Pj4//Li4u/0BAQP8ZGRn/LCws/0ZGRv8hISH/ISEh/z09Pf8hISH/GBgY/xoaGv+zs7P/8vLy//T0
+        9P/19fX/9/f3//f39/9QUFD/xcXF//7+/v/+/v7/4ODg/21tbf+8vLz/wMDA/8LCwv/Dw8P/xcXF/7a2
+        tv9DQ0P/FxcX/xcXF/8lJSX/IyMj/xwcHP8mJib/ODg4/xkZGf85OTn/NTU1/ywsLP/v7+//////////
+        //////////////v7+/9CQkL/NjY2/zc3N/8dHR3/NDQ0/zQ0NP8oKCj/ICAg/yIiIv8ZGRn/FhYW/zAw
+        MP/r6+v/9PT0//X19f/39/f/+Pj4/+Dg4P81NTX/8fHx///////+/v7/+/v7/3Jycv+oqKj/wsLC/8PD
+        w//FxcX/xsbG/8fHx/9wcHD/ICAg/xMTE/8TExP/Hx8f/zU1Nf8TExP/GBgY/1paWv8YGBj/ExMT/xwc
+        HP+fn5///v7+/////////////////8TExP8dHR3/FRUV/xMTE/9SUlL/JCQk/xMTE/8wMDD/Hx8f/xMT
+        E/8TExP/EBAQ/42Njf/09PT/9fX1//f39//4+Pj/+fn5/5+fn/9gYGD//v7+//7+/v/+/v7//v7+/6Wl
+        pf98fHz/w8PD/8XFxf/Gxsb/x8fH/8nJyf+2trb/Pj4+/xQUFP8RERH/FRUV/xkZGf8fHx//NTU1/xcX
+        F/82Njb/Li4u/x0dHf8XFxf/UVFR/2FhYf9mZmb/Xl5e/yAgIP8WFhb/MzMz/zExMf8bGxv/MjIy/yYm
+        Jv8dHR3/ERER/xEREf8QEBD/Kysr/+rq6v/19fX/9/f3//j4+P/6+vr/+fn5/0hISP+xsbH//v7+////
+        ///+/v7//v7+/+Xl5f9TU1P/ubm5/8bGxv/Hx8f/ycnJ/8rKyv/MzMz/k5OT/zk5Of8PDw//Dg4O/w8P
+        D/8nJyf/Hx8f/w4ODv8gICD/PDw8/w8PD/8dHR3/PDw8/xkZGf8SEhL/OTk5/ygoKP8ODg7/NDQ0/zs7
+        O/8ODg7/GRkZ/zAwMP8QEBD/Dg4O/w4ODv8KCgr/t7e3//X19f/39/f/+Pj4//r6+v/7+/v/xsbG/y8v
+        L//19fX//v7+///////+/v7///////7+/v+Ghob/e3t7/8fHx//Jycn/ysrK/8zMzP/Nzc3/zs7O/4OD
+        g/84ODj/DAwM/w0NDf8NDQ3/FBQU/y0tLf8TExP/Dw8P/zs7O/8pKSn/DAwM/y8vL/87Ozv/DQ0N/x8f
+        H/8/Pz//FhYW/xISEv88PDz/GBgY/wwMDP8ODg7/DAwM/wYGBv+EhIT/9vb2//f39//4+Pj/+vr6//v7
+        +//7+/v/T09P/5SUlP/+/v7//v7+//7+/v/+/v7//v7+//7+/v/i4uL/RUVF/7W1tf/Kysr/zMzM/83N
+        zf/Pz8//0NDQ/87Ozv+Kior/QEBA/wsLC/8KCgr/DQ0N/xkZGf8XFxf/EhIS/xoaGv8uLi7/Dw8P/zAw
+        MP8sLCz/FBQU/xsbG/8hISH/ICAg/xQUFP8YGBj/EBAQ/woKCv8JCQn/BgYG/2xsbP/09PT/9/f3//j4
+        +P/6+vr/+/v7//z8/P+2trb/Kioq//Pz8//+/v7//v7+//7+/v///////v7+//7+/v/+/v7/oKCg/2lp
+        af/Ly8v/zc3N/8/Pz//Q0ND/0tLS/9PT0//R0dH/n5+f/19fX/8RERH/BwcH/wcHB/8TExP/Hh4e/wcH
+        B/8NDQ3/R0dH/wsLC/8HBwf/Nzc3/xMTE/8HBwf/GRkZ/x0dHf8HBwf/BwcH/wcHB/8ICAj/eXl5/9HR
+        0f/m5ub/+Pj4//r6+v/7+/v//Pz8//Dw8P8nJyf/sbGx//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v//////+fn5/3Jycv+Wlpb/z8/P/9DQ0P/R0dH/xcXF/3p6ev97e3v/xMTE/8DAwP+goKD/R0dH/wgI
+        CP8EBAT/BwcH/wQEBP8KCgr/CQkJ/ysrK/8ZGRn/CQkJ/wsLC/8FBQX/BQUF/wUFBf8FBQX/CAgI/x0d
+        Hf+mpqb/8vLy/1RUVP9XV1f/8fHx//v7+//8/Pz//Pz8/19fX/9jY2P//v7+//7+/v///////v7+////
+        /////////v7+//7+/v/+/v7//////+bm5v9qamr/sbGx/9HR0f/T09P/aWlp/1tbW/9nZ2f/YmJi/9nZ
+        2f/Y2Nj/3Nzc/7i4uP9UVFT/FBQU/wEBAf8BAQH/AAAA/wUFBf8ICAj/AQEB/wAAAP8BAQH/BgYG/w0N
+        Df8aGhr/bm5u/97e3v+ysrL/YWFh/3h4eP8WFhb/cXFx//n5+f/+/v7/jIyM/zQ0NP/y8vL///////7+
+        /v////////////7+/v/+/v7//v7+///////+/v7////////////W1tb/dnZ2/729vf/U1NT/XFxc/4CA
+        gP+MjIz/TU1N/9nZ2f/b29v/y8vL/93d3f/Q0ND/rKys/3R0dP9LS0v/NDQ0/ycnJ/8iIiL/IiIi/yIi
+        Iv8pKSn/TExM/4yMjP/b29v/9PT0//X19f/b29v/MDAw/ygoKP+2trb/bW1t//f39/+goKD/Jycn/97e
+        3v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v////////////7+/v/+/v7/09PT/4OD
+        g/+/v7//s7Oz/0tLS/9DQ0P/o6Oj/93d3f/b29v/b29v/6Wlpf/CwsL/y8vL/9vb2//Hx8f/tbW1/6mp
+        qf+lpaX/ra2t/8HBwf/g4OD/7u7u/7a2tv/n5+f/9fX1//f39//4+Pj/zMzM/yMjI/++vr7//f39/5iY
+        mP8lJSX/1NTU//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7///////7+/v////////////7+
+        /v/+/v7//////93d3f+Tk5P/u7u7/9jY2P/Z2dn/3d3d/97e3v/g4OD/dXV1/3Z2dv9lZWX/r6+v/+fn
+        5//o6Oj/ycnJ/4ODg/+MjIz/3t7e/+/v7//x8fH/7u7u/z4+Pv+kpKT/9/f3//j4+P/6+vr/+/v7/9/f
+        3//39/f/dHR0/y4uLv/a2tr//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v////////////7+/v/+/v7////////////t7e3/r6+v/7q6uv/Z2dn/3t7e/+Dg4P/i4uL/fn5+/2ho
+        aP+enp7/5+fn/+jo6P/q6ur/a2tr/4ODg/9kZGT/mpqa//Hx8f/y8vL/9PT0/4mJif9TU1P/p6en//T0
+        9P/7+/v//Pz8/9TU1P88PDz/UVFR/+vr6//+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/////////////////////////////////+/v7/+/v7/9jY2P/Jycn/2tra/+Hh
+        4f/j4+P/ra2t/5mZmf/l5eX/6enp/+rq6v/q6ur/YWFh/7CwsP+CgoL/j4+P//Pz8//09PT/6urq/15e
+        Xv86Ojr/gYGB//Hx8f/n5+f/enp6/yEhIf+Xl5f/+/v7//7+/v/+/v7//v7+//7+/v//////////////
+        ///+/v7////////////+/v7//v7+///////+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/29vb/6urq/+jo6P/f39//4uLi/+fn5//o6Oj/6urq/+vr6//s7Oz/enp6/729vf+Xl5f/o6Oj//T0
+        9P/19fX/9fX1/7e3t//s7Oz/09PT/3p6ev8qKir/bm5u/+Tk5P/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v///////v7+///////+/v7///////7+/v/+/v7//////////////////v7+/////////////v7+////
+        ///+/v7//////////////////v7+//n5+f/k5OT/xsbG/7u7u//ExMT/09PT/+Li4v/s7Oz/7+/v//Ly
+        8v/z8/P/8/Pz//Dw8P/g4OD/vb29/4uLi/9ISEj/PDw8/4aGhv/h4eH//v7+//7+/v/+/v7/////////
+        /////////v7+//7+/v/////////////////+/v7//v7+///////+/v7///////7+/v///////v7+//7+
+        /v/+/v7//////////////////v7+//7+/v///////v7+//7+/v//////+/v7/+fn5//FxcX/oqKi/4SE
+        hP94eHj/dXV1/3Nzc/9ra2v/XV1d/05OTv9PT0//aWlp/5OTk//Pz8//+Pj4//7+/v/+/v7///////7+
+        /v/+/v7///////7+/v////////////7+/v///////////////////////v7+///////+/v7//v7+//7+
+        /v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+
+        /v/+/v7//v7+//z8/P/09PT/6enp/+Tk5P/i4uL/6Ojo//Pz8//7+/v//v7+//7+/v/+/v7//v7+////
+        ///+/v7//v7+//7+/v/+/v7///////7+/v///////v7+//7+/v/+/v7//v7+///////+/v7//v7+//7+
+        /v8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
+  </data>
+</root>
