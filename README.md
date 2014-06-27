@@ -14,7 +14,7 @@ OAuth Request Crafter is a tool that helps you to play with OAuth signature prot
 
 - Add additional Headers and Cookie
 
-#Why use OAuth Request Crafter
+#Why?
 
 - When dealing with OAuth signature protected URLs, For tampering or issuing a request, Everytime you have to use some tool to generate a valid signature and nonce protected parameters and add it to your proxy to make a successful request.
 This is a pain since you have to do this manually for every single request.
