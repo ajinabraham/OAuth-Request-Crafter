@@ -66,6 +66,8 @@ Partial Class oauthrequestcrafter
         Me.SetProxyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.oauth_auth_header = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -405,10 +407,10 @@ Partial Class oauthrequestcrafter
         '
         'browserparams
         '
-        Me.browserparams.Location = New System.Drawing.Point(711, 3)
+        Me.browserparams.Location = New System.Drawing.Point(628, 2)
         Me.browserparams.MinimumSize = New System.Drawing.Size(20, 20)
         Me.browserparams.Name = "browserparams"
-        Me.browserparams.Size = New System.Drawing.Size(68, 38)
+        Me.browserparams.Size = New System.Drawing.Size(87, 40)
         Me.browserparams.TabIndex = 26
         Me.browserparams.Visible = False
         '
@@ -457,11 +459,33 @@ Partial Class oauthrequestcrafter
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
+        Me.CheckBox2.Location = New System.Drawing.Point(301, 343)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(172, 17)
+        Me.CheckBox2.TabIndex = 31
+        Me.CheckBox2.Text = "OAuth as Authorization Header"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'oauth_auth_header
+        '
+        Me.oauth_auth_header.Location = New System.Drawing.Point(742, 22)
+        Me.oauth_auth_header.Name = "oauth_auth_header"
+        Me.oauth_auth_header.Size = New System.Drawing.Size(125, 20)
+        Me.oauth_auth_header.TabIndex = 32
+        Me.oauth_auth_header.Text = resources.GetString("oauth_auth_header.Text")
+        Me.oauth_auth_header.Visible = False
+        '
         'oauthrequestcrafter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(929, 689)
+        Me.Controls.Add(Me.oauth_auth_header)
+        Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.browserparams)
         Me.Controls.Add(Me.TextBox1)
@@ -492,7 +516,6 @@ Partial Class oauthrequestcrafter
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "oauthrequestcrafter"
         Me.Text = "OAuth 1.0a Request Crafter"
         Me.GroupBox2.ResumeLayout(False)
@@ -548,5 +571,7 @@ Partial Class oauthrequestcrafter
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SetProxyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents oauth_auth_header As System.Windows.Forms.TextBox
 
 End Class

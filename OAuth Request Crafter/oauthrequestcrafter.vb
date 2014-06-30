@@ -10,16 +10,23 @@ Public Class oauthrequestcrafter
 
 
 
-    Public finalparam As String
+    Public flag As Integer
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         Dim html As String = ""
+
         If urlz.Text = "" Or method.Text = "" Or version.Text = "" Or signaturemethod.Text = "" Or csecret.Text = "" Or ckey.Text = "" Then
             MsgBox("Missing OAuth Fields", vbCritical)
         Else
-            html = TextBox1.Text.Replace("XURL", urlz.Text).Replace("XPARAMS", parameters.Text).Replace("XMETHOD", method.Text).Replace("XVERSION", version.Text).Replace("XSIG_METHOD", signaturemethod.Text).Replace("XCONSUMER_KEY", ckey.Text).Replace("XCONSUMER_SECRET", csecret.Text).Replace("XOTOKEN", token.Text).Replace("XTOKEN_SECRET", tokensecret.Text)
-            browserparams.DocumentText = html
+            If (CheckBox2.Checked = True) Then
+                html = oauth_auth_header.Text.Replace("XURL", urlz.Text).Replace("XPARAMS", parameters.Text).Replace("XMETHOD", method.Text).Replace("XVERSION", version.Text).Replace("XSIG_METHOD", signaturemethod.Text).Replace("XCONSUMER_KEY", ckey.Text).Replace("XCONSUMER_SECRET", csecret.Text).Replace("XOTOKEN", token.Text).Replace("XTOKEN_SECRET", tokensecret.Text)
+                browserparams.DocumentText = html
+                flag = 0
+            Else
 
-
+                html = TextBox1.Text.Replace("XURL", urlz.Text).Replace("XPARAMS", parameters.Text).Replace("XMETHOD", method.Text).Replace("XVERSION", version.Text).Replace("XSIG_METHOD", signaturemethod.Text).Replace("XCONSUMER_KEY", ckey.Text).Replace("XCONSUMER_SECRET", csecret.Text).Replace("XOTOKEN", token.Text).Replace("XTOKEN_SECRET", tokensecret.Text)
+                browserparams.DocumentText = html
+                flag = 1
+            End If
         End If
     End Sub
 
@@ -54,16 +61,21 @@ Public Class oauthrequestcrafter
 
    
     Private Sub browserparams_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles browserparams.Navigated
+        ServicePointManager.ServerCertificateValidationCallback = AddressOf ValidateRemoteCertificate
 
         If (e.Url.ToString().Contains("http://")) Then
-            ServicePointManager.ServerCertificateValidationCallback = AddressOf ValidateRemoteCertificate
             Dim oauthparams As String = e.Url.AbsolutePath.Remove(0, 1)
-            If (method.Text = "POST") Or (method.Text = "PUT") Then
-                Dim para() = parameters.Text.Split("&")
-                For Each p As String In para
-                    oauthparams = oauthparams.Replace("&" + p, "")
-                Next
 
+            If (flag = 1) Then
+                If (method.Text = "POST") Or (method.Text = "PUT") Then
+                    Dim para() = parameters.Text.Split("&")
+                    For Each p As String In para
+                        oauthparams = oauthparams.Replace("&" + p, "")
+                    Next
+
+                End If
+            Else
+                oauthparams = oauthparams.Replace("%22", """").Replace("%20", " ")
             End If
             '  MsgBox(oauthparams)
             If method.Text.Contains("POST") Or method.Text.Contains("PUT") Then
@@ -71,7 +83,12 @@ Public Class oauthrequestcrafter
                 browser.DocumentText = ""
                 Try
 
-                    Dim postReq As HttpWebRequest = DirectCast(WebRequest.Create(urlz.Text + "?" + oauthparams), HttpWebRequest)
+                    Dim postReq As HttpWebRequest
+                    If (flag = 1) Then
+                        postReq = DirectCast(WebRequest.Create(urlz.Text + "?" + oauthparams), HttpWebRequest)
+                    Else
+                        postReq = DirectCast(WebRequest.Create(urlz.Text), HttpWebRequest)
+                    End If
                     Dim encoding As New UTF8Encoding
                     Dim postData As String = parameters.Text
                     Dim byteData As Byte() = encoding.GetBytes(postData)
@@ -91,6 +108,10 @@ Public Class oauthrequestcrafter
 
                     End If
                     postReq.Method = method.Text
+                    If (flag = 0) Then
+                        postReq.Headers.Add("Authorization", oauthparams)
+
+                    End If
                     postReq.ContentType = "application/x-www-form-urlencoded; charset=UTF-8"
                     postReq.KeepAlive = True
                     'ADD HEADERS
@@ -156,7 +177,13 @@ Public Class oauthrequestcrafter
                 browser.DocumentText = ""
                 Try
                     Dim tempCookies As New CookieContainer
-                    Dim postReq As HttpWebRequest = CType(WebRequest.Create(urlz.Text + "?" + oauthparams), HttpWebRequest)
+                    Dim postReq As HttpWebRequest
+                    If (flag = 1) Then
+                        postReq = CType(WebRequest.Create(urlz.Text + "?" + oauthparams), HttpWebRequest)
+                    Else
+                        postReq = CType(WebRequest.Create(urlz.Text + "?" + parameters.Text), HttpWebRequest)
+                    End If
+
                     'Proxy support
 
                     If CheckBox1.Checked = True Then
@@ -175,6 +202,10 @@ Public Class oauthrequestcrafter
 
                     postReq.Method = method.Text
                     'ADD HEADER
+                    If (flag = 0) Then
+                        postReq.Headers.Add("Authorization", oauthparams)
+
+                    End If
                     postReq.ContentType = "application/x-www-form-urlencoded; charset=UTF-8"
                     Dim cnt As Integer = 0
                     Dim posSep, hname, hvalue As String
