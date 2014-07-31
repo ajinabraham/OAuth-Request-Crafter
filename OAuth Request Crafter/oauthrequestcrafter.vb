@@ -6,17 +6,19 @@ Imports System.IO
 Imports System.Security.Cryptography.X509Certificates
 Imports System.Net.Security
 
+
 Public Class oauthrequestcrafter
 
 
 
     Public flag As Integer
-    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+    Private Sub Button11_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button11.Click
         Dim html As String = ""
 
         If urlz.Text = "" Or method.Text = "" Or version.Text = "" Or signaturemethod.Text = "" Or csecret.Text = "" Or ckey.Text = "" Then
             MsgBox("Missing OAuth Fields", vbCritical)
         Else
+            'OAuth in Header
             If (CheckBox2.Checked = True) Then
                 html = oauth_auth_header.Text.Replace("XURL", urlz.Text).Replace("XPARAMS", parameters.Text).Replace("XMETHOD", method.Text).Replace("XVERSION", version.Text).Replace("XSIG_METHOD", signaturemethod.Text).Replace("XCONSUMER_KEY", ckey.Text).Replace("XCONSUMER_SECRET", csecret.Text).Replace("XOTOKEN", token.Text).Replace("XTOKEN_SECRET", tokensecret.Text)
                 browserparams.DocumentText = html
@@ -30,7 +32,7 @@ Public Class oauthrequestcrafter
         End If
     End Sub
 
-    Private Sub oauthrequestcrafter_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub oauthrequestcrafter_FormClosing(ByVal sender As Object, ByVal e As FormClosingEventArgs) Handles Me.FormClosing
         My.Settings.xmethod = method.Text
         My.Settings.xurl = urlz.Text
         My.Settings.xparams = parameters.Text
@@ -43,7 +45,7 @@ Public Class oauthrequestcrafter
         My.Settings.Save()
     End Sub
 
-    Private Sub oauthrequestcrafter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub oauthrequestcrafter_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         method.Text = My.Settings.xmethod
         urlz.Text = My.Settings.xurl
         parameters.Text = My.Settings.xparams
@@ -59,8 +61,8 @@ Public Class oauthrequestcrafter
         Return True
     End Function
 
-   
-    Private Sub browserparams_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles browserparams.Navigated
+
+    Private Sub browserparams_Navigated(ByVal sender As Object, ByVal e As WebBrowserNavigatedEventArgs) Handles browserparams.Navigated
         ServicePointManager.ServerCertificateValidationCallback = AddressOf ValidateRemoteCertificate
 
         If (e.Url.ToString().Contains("http://")) Then
@@ -81,6 +83,7 @@ Public Class oauthrequestcrafter
             If method.Text.Contains("POST") Or method.Text.Contains("PUT") Then
                 responseheaders.Text = ""
                 browser.DocumentText = ""
+                RTB.Text = ""
                 Try
 
                     Dim postReq As HttpWebRequest
@@ -158,7 +161,10 @@ Public Class oauthrequestcrafter
                     Dim myHttpWebResponse As HttpWebResponse = DirectCast(postReq.GetResponse(), HttpWebResponse)
                     tempCookies.Add(myHttpWebResponse.Cookies)
                     Dim postreqreader As New StreamReader(myHttpWebResponse.GetResponseStream, encoding)
-                    browser.DocumentText = postreqreader.ReadToEnd
+
+
+                    RTB.Text = postreqreader.ReadToEnd
+                    browser.DocumentText = RTB.Text
                     responseheaders.Text = "HTTP/" + myHttpWebResponse.ProtocolVersion.ToString + " " + Str(myHttpWebResponse.StatusCode) + " " + myHttpWebResponse.StatusDescription.ToString + ControlChars.CrLf
 
                     Dim i As Integer
@@ -168,6 +174,20 @@ Public Class oauthrequestcrafter
                     End While
 
                     myHttpWebResponse.Close()
+                Catch wbr As WebException
+                    responseheaders.Text = wbr.Message.ToString
+                    Using response As WebResponse = wbr.Response
+                        Dim httpResponse As HttpWebResponse = DirectCast(response, HttpWebResponse)
+
+                        Using data As Stream = response.GetResponseStream()
+                            Using reader = New StreamReader(data)
+                                Dim text As String = reader.ReadToEnd()
+                                browser.DocumentText = text
+                                RTB.Text = text
+                            End Using
+                        End Using
+                    End Using
+
                 Catch xxx As Exception
                     responseheaders.Text = xxx.Message.ToString
                 End Try
@@ -175,13 +195,18 @@ Public Class oauthrequestcrafter
             ElseIf method.Text.Contains("GET") Or method.Text.Contains("DELETE") Then
                 responseheaders.Text = ""
                 browser.DocumentText = ""
+                RTB.Text = ""
                 Try
                     Dim tempCookies As New CookieContainer
                     Dim postReq As HttpWebRequest
                     If (flag = 1) Then
                         postReq = CType(WebRequest.Create(urlz.Text + "?" + oauthparams), HttpWebRequest)
                     Else
-                        postReq = CType(WebRequest.Create(urlz.Text + "?" + parameters.Text), HttpWebRequest)
+                        If parameters.Text.Length > 0 Then
+                            postReq = CType(WebRequest.Create(urlz.Text + "?" + parameters.Text), HttpWebRequest)
+                        Else
+                            postReq = CType(WebRequest.Create(urlz.Text), HttpWebRequest)
+                        End If
                     End If
 
                     'Proxy support
@@ -239,12 +264,14 @@ Public Class oauthrequestcrafter
                         tempCookies.Add(New Uri(urlz.Text), New Cookie(hname, hvalue))
                     Next
                     postReq.CookieContainer = tempCookies
-
+           
                     'RESPONSE
                     Dim myHttpWebResponse As HttpWebResponse = CType(postReq.GetResponse(), HttpWebResponse)
 
                     Dim postreqreader As New StreamReader(myHttpWebResponse.GetResponseStream)
-                    browser.DocumentText = postreqreader.ReadToEnd
+
+                    RTB.Text = postreqreader.ReadToEnd
+                    browser.DocumentText = RTB.Text
                     responseheaders.Text += "HTTP/" + myHttpWebResponse.ProtocolVersion.ToString + " " + Str(myHttpWebResponse.StatusCode) + " " + myHttpWebResponse.StatusDescription.ToString + ControlChars.CrLf
                     Dim i As Integer
                     While i < myHttpWebResponse.Headers.Count
@@ -253,8 +280,23 @@ Public Class oauthrequestcrafter
                     End While
 
                     myHttpWebResponse.Close()
-                Catch xxx As Exception
-                    responseheaders.Text = xxx.Message.ToString
+                Catch wb As WebException
+                    responseheaders.Text = wb.Message.ToString
+                    Using response As WebResponse = wb.Response
+                        Dim httpResponse As HttpWebResponse = DirectCast(response, HttpWebResponse)
+
+                        Using data As Stream = response.GetResponseStream()
+                            Using reader = New StreamReader(data)
+                                Dim text As String = reader.ReadToEnd()
+                                browser.DocumentText = text
+                                RTB.Text = text
+                            End Using
+                        End Using
+                    End Using
+
+                Catch xxy As Exception
+                    responseheaders.Text = xxy.Message.ToString
+
                 End Try
             Else
                 MsgBox("Unsupported Method!", vbCritical)
@@ -264,21 +306,21 @@ Public Class oauthrequestcrafter
         End If
     End Sub
 
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+    Private Sub Button10_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button10.Click
         Me.Close()
 
     End Sub
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim header As String = InputBox("Enter the Header Name and Value","Add Header")
+    Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button1.Click
+        Dim header As String = InputBox("Enter the Header Name and Value", "Add Header")
         If (header.Contains(":") And header.Length > 2) Then
             headers.Items.Add(header)
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button2.Click
         If headers.SelectedIndex >= 0 Then
             Dim eheader As String = InputBox("Enter the Header", "Edit Header")
             If (eheader.Contains(":") And eheader.Length > 2) Then
@@ -287,24 +329,24 @@ Public Class oauthrequestcrafter
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button3.Click
         If headers.SelectedIndex >= 0 Then
             headers.Items.RemoveAt(headers.SelectedIndex)
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button4.Click
         headers.Items.Clear()
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button8.Click
         Dim namevalue As String = InputBox("Enter the Cookie Name and Value", "Add Cookie")
         If (namevalue.Contains(":") And namevalue.Length > 2) Then
             cookies.Items.Add(namevalue)
         End If
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button7.Click
         If cookies.SelectedIndex >= 0 Then
             Dim cook As String = InputBox("Enter the Cookie", "Edit Cookie")
             If (cook.Contains(":") And cook.Length > 2) Then
@@ -314,33 +356,33 @@ Public Class oauthrequestcrafter
     End Sub
 
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button6.Click
         If cookies.SelectedIndex >= 0 Then
             cookies.Items.RemoveAt(cookies.SelectedIndex)
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Button5.Click
         cookies.Items.Clear()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles CheckBox1.CheckedChanged
 
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+    Private Sub ExitToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
 
-    Private Sub SetProxyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetProxyToolStripMenuItem.Click
+    Private Sub SetProxyToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SetProxyToolStripMenuItem.Click
         SetProxy.Show()
     End Sub
 
-    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+    Private Sub AboutToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles AboutToolStripMenuItem.Click
         MsgBox("OAuth1.0a Request Crafter" + vbCrLf + "A Simple Tool to generate OAuth Signature and make the Request on the Go." + vbCrLf + "Ajin Abraham" + vbCrLf + "opensecurity.in")
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+    Private Sub MenuStrip1_ItemClicked(ByVal sender As Object, ByVal e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
 End Class

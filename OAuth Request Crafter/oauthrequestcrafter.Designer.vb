@@ -52,6 +52,10 @@ Partial Class oauthrequestcrafter
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.RTB = New System.Windows.Forms.RichTextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.browser = New System.Windows.Forms.WebBrowser()
         Me.responseheaders = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -71,6 +75,9 @@ Partial Class oauthrequestcrafter
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -333,7 +340,7 @@ Partial Class oauthrequestcrafter
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.browser)
+        Me.GroupBox3.Controls.Add(Me.TabControl1)
         Me.GroupBox3.Controls.Add(Me.responseheaders)
         Me.GroupBox3.Location = New System.Drawing.Point(29, 365)
         Me.GroupBox3.Name = "GroupBox3"
@@ -342,12 +349,54 @@ Partial Class oauthrequestcrafter
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "RESPONSE"
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Location = New System.Drawing.Point(449, 16)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(410, 279)
+        Me.TabControl1.TabIndex = 26
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.RTB)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(402, 253)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Raw View"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'RTB
+        '
+        Me.RTB.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RTB.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RTB.Location = New System.Drawing.Point(5, 7)
+        Me.RTB.Name = "RTB"
+        Me.RTB.Size = New System.Drawing.Size(391, 243)
+        Me.RTB.TabIndex = 0
+        Me.RTB.Text = ""
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.browser)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(402, 253)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Browser View"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
         'browser
         '
-        Me.browser.Location = New System.Drawing.Point(451, 19)
+        Me.browser.Location = New System.Drawing.Point(3, 3)
         Me.browser.MinimumSize = New System.Drawing.Size(20, 20)
         Me.browser.Name = "browser"
-        Me.browser.Size = New System.Drawing.Size(416, 273)
+        Me.browser.Size = New System.Drawing.Size(393, 244)
         Me.browser.TabIndex = 25
         '
         'responseheaders
@@ -462,6 +511,8 @@ Partial Class oauthrequestcrafter
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Checked = True
+        Me.CheckBox2.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.CheckBox2.Location = New System.Drawing.Point(301, 343)
         Me.CheckBox2.Name = "CheckBox2"
@@ -522,6 +573,9 @@ Partial Class oauthrequestcrafter
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -573,5 +627,9 @@ Partial Class oauthrequestcrafter
     Friend WithEvents SetProxyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents oauth_auth_header As System.Windows.Forms.TextBox
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents RTB As System.Windows.Forms.RichTextBox
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
 
 End Class
